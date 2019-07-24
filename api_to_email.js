@@ -6,7 +6,7 @@ exports.handler = function(event, context) {
   
 
 /** 
- NOTE: The 'event' object has EVERYTHING in the Payload.
+ NOTE: The 'event' object has EVERYTHING in the PagerDuty Webhook Payload.
  You can select the subsections you want using the relevant path
 */
   const content = event.detail.incident;
