@@ -9,8 +9,7 @@ exports.handler = function(event, context) {
  NOTE: The 'event' object has EVERYTHING in the Payload.
  You can select the subsections you want using the relevant path
 */
-
-   const content = event.detail.incident;
+  const content = event.detail.incident;
 
   // Format the Incident Payload into pretty/indented JSON
   const textBody = JSON.stringify(content, null, 2);
@@ -21,12 +20,12 @@ exports.handler = function(event, context) {
   
 	Destination: { /* required */
 
-	    ToAddresses: ['EMAIL_ADDRESS',
-	    			  /* more items */
+	    ToAddresses: ['EMAIL_ADDRESS'
+	    			  /*  more addresses optional (comma separated) */
 	    			 ],
 		
-	    CcAddresses: ['EMAIL_ADDRESS',
-	      			  /* more items */
+	    CcAddresses: ['EMAIL_ADDRESS'
+	    			  /*  more addresses optional (comma separated) */
 	    			 ]
 		
 	  },
@@ -48,8 +47,8 @@ exports.handler = function(event, context) {
   
     Source: "FROM_EMAIL_ADDRESS_HERE",
 	
-	ReplyToAddresses: ['REPLY_TO_EMAIL_ADDRESS',
-	    				/* more items */
+	ReplyToAddresses: ['REPLY_TO_EMAIL_ADDRESS'
+	    			  /*  more addresses optional (comma separated) */
 	  				  ]
 	  
   };
