@@ -1,7 +1,8 @@
 const AWS = require("aws-sdk");
+const awsRegion = "us-east-1";
 
 exports.handler = function(event, context) {
-  AWS.config.update({ region: "us-east-1" });
+  AWS.config.update({ region: awsRegion });
   console.log('Handling confirmation email to', event);
   
 
@@ -27,7 +28,6 @@ exports.handler = function(event, context) {
 	    CcAddresses: ['EMAIL_ADDRESS'
 	    			  /*  more addresses optional (comma separated) */
 	    			 ]
-		
 	  },
   
     Message: {
